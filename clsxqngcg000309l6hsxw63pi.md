@@ -1,6 +1,6 @@
 ---
 title: "Install, Configure, and  Host a Custom Website on Apache2  Web Server, with Ubuntu, Using AWS EC2 Instance"
-seoTitle: "Step-by-Step Guide: Installing, Configuring, and Hosting a Custom Webs"
+seoTitle: "Step-by-Step Guide: Installing, Configuring, an Apache2 webserver."
 seoDescription: "Follow our comprehensive step-by-step guide for seamless installation, configuration, and deployment of your custom website."
 datePublished: Thu Feb 22 2024 21:31:39 GMT+0000 (Coordinated Universal Time)
 cuid: clsxqngcg000309l6hsxw63pi
@@ -16,7 +16,7 @@ Ubuntu is the most used web server that allows you to host web pages and applica
 
 We will be covering Installing, Configuring, and Hosting a Custom Website on Apache2 Web Server, with Ubuntu, Using AWS EC2 Instance.
 
-### What you will need for this Hands-on
+## What you will need for this Hands-on
 
 •AWS management console
 
@@ -24,7 +24,7 @@ We will be covering Installing, Configuring, and Hosting a Custom Website on Apa
 
 •GitHub account
 
-### Setting up of EC2 Instance
+## Setting up of EC2 Instance
 
 1. Log into your AWS management console to begin this hands-on. Navigate to the EC2 instance by searching for the service in the console and click on it so you can create an instance. Click on 'launch instance'. I have marked it in a rectangular shape. Please take note of every area I emphasized with a circle or rectangle in the course of explaining this project.
     
