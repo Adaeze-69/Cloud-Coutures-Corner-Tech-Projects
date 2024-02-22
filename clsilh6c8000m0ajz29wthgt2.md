@@ -1,15 +1,6 @@
----
-title: "Linux Commands"
-seoTitle: "Mastering Linux Commands:A Step-by-Step Manual for Managing Files and"
-seoDescription: "Discover how to use Linux to its fullest capacity by thoroughly understanding the key commands for organizing files and folders."
-datePublished: Mon Feb 12 2024 07:10:15 GMT+0000 (Coordinated Universal Time)
-cuid: clsilh6c8000m0ajz29wthgt2
-slug: linux-commands
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1707677454641/dd3e60dc-4fc4-4767-b13e-39b37db93dc2.png
-tags: operating-system, linux, command-line, files, commands, directory
 
----
-
+ # Linux Commands
+ 
 "So what is Linux? Can you explain to me like I am 5 years old?"
 
 *Ps: I'll be using folders and directory interchangeably but they mean the same thing*
@@ -26,7 +17,7 @@ Linux is ***an open-source operating system developed by Linus Torvalds. It is a
 
 I want to walk you through an exercise where you get to use linux commands to walk around especially if this is your first time. Try it and let me know how it goes!
 
-### EXERCISE
+## EXERCISE
 
 Create your login name and name it anything. I name mine altschool i.e., home directory /home/altschool. The home directory contains the following sub-directories: code, tests, personal, misc Unless otherwise specified, you are running commands from the home directory.
 
@@ -36,7 +27,7 @@ i. Create a login name called Altschool on your terminal from your root user. Yo
 
 `sudo useradd -Ums /bin/bash Altschool`
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707514253793/5c84cfdd-394e-43ac-a45d-8c499944e8ee.png align="left")
+![sudoadd](https://cdn.hashnode.com/res/hashnode/image/upload/v1707514253793/5c84cfdd-394e-43ac-a45d-8c499944e8ee.png )
 
 > `useradd` command helps you create a new login user
 
@@ -52,7 +43,7 @@ ii. Switch user from vagrant (root user) to Altschool user created
 
 `sudo su Altschool`
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707515755801/acdef3b7-f005-471e-9abc-9ad45d217618.png align="center")
+![sudo su](https://cdn.hashnode.com/res/hashnode/image/upload/v1707515755801/acdef3b7-f005-471e-9abc-9ad45d217618.png)
 
 > `sudo` is the command that allows regular users to perform administrative tasks or commands that typically require root or superuser privileges
 > 
@@ -64,13 +55,13 @@ iii. create sub directories named **code, tests, personal & misc**
 
 Use `ls` to check that the list of the directories created are in the home directory.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707516200431/fdba1a3f-713f-485c-98bf-3dc2ab611844.png align="left")
+![ls](https://cdn.hashnode.com/res/hashnode/image/upload/v1707516200431/fdba1a3f-713f-485c-98bf-3dc2ab611844.png)
 
 > `mkdir` means make directory. It is a command in Linux for creating new directories or folders to organize your files and data.
 > 
 > `ls` means list. This is used to display a list of files and directories in the current directory or a specified directory.
 
-### Instructions:
+## Instructions:
 
 Just before we get to the exercise, let us discuss the difference between **Home Directory** (`cd /home`) and **Root Directory** (`cd /`).
 
@@ -80,9 +71,9 @@ a.Change directory to the **tests** directory using absolute pathname
 
 `cd /home/Altschool/tests`
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707517407571/91e8fa6d-9088-4042-a9ad-d177e689812f.png align="left")
+![cd](https://cdn.hashnode.com/res/hashnode/image/upload/v1707517407571/91e8fa6d-9088-4042-a9ad-d177e689812f.png )
 
-> `cd` means change directory. It is a command is used to move to another directory. Like changing from the present directory to another existing directory of your choice
+> `cd` means change directory. It is a command that is used to move to another directory. Like changing from the present directory to another existing directory of your choice
 > 
 > **Absolute pathname** specifies the location of a file or directory from the root directory of the file system. It provides the complete path starting from the root directory and includes all intermediate directories. For example, in a Unix-like file system, an absolute pathname might look like /home/Altschool/tests, where the first "/" after the "cd" command represents the root directory. Think of it like giving directions starting from the very bottom of the tree, the roots. So, if we want to find something, we start from the roots and follow the path all the way up to the branch where it's stored
 
@@ -92,7 +83,7 @@ b. Change directory to the **tests** directory using relative pathname
 
 `cd ./tests`
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707517798506/4ed683ae-6092-49f6-978b-e16fd806ee65.png align="left")
+![tests](https://cdn.hashnode.com/res/hashnode/image/upload/v1707517798506/4ed683ae-6092-49f6-978b-e16fd806ee65.png )
 
 > When you wish to refer to files or directories in relation to where you currently are in the filesystem hierarchy, **relative pathnames** come in handy just like `cd ./tests`. They are frequently more practical and shorter than absolute pathnames. It describes the path from the current directory. For example, if the current directory is /home/Altschool/, a relative pathname to access the file tests located in the Altschool directory would be "cd tests" or "cd ./tests" where the first "." after the "cd" means you want to search in the present folder and the "/tests" is the folder you want to change to, particularly for moving across directories that share a structure. But if you change the current working directory, they could become unclear.
 > 
@@ -104,13 +95,13 @@ c. Use echo command to create a file named fileA with text content ‘Hello A’
 
 `echo 'Hello A' > misc/fileA`
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707518171848/b15a3785-c203-44a9-b3b4-a2a41026fd2b.png align="left")
+![echo](https://cdn.hashnode.com/res/hashnode/image/upload/v1707518171848/b15a3785-c203-44a9-b3b4-a2a41026fd2b.png )
 
 > `echo` command is used for printing text or variables to the terminal or into a file in the terminal. One cool thing I love about the `echo` command is that you can print into a new file on one line of command, redirecting the output of a command into a new file using the "&gt;" symbol. The file does not necessarily have to be created before you can print in it. I hope that is clear. Check the attached image for context.
 > 
-> Also, since we are creating and using all commands in the home directory of Altschool,we will have to echo into `misc/fileA` following the path of misc.
+> Also, since we are creating and using all commands in the home directory of Altschool, we will have to echo into `misc/fileA` following the path of misc.
 > 
-> Then use the `ls` command (I already explained it previously) with the `-al` flag to check for ALL directories,files and everything in that directory. You can always have a directory inside a directory. A directory is synonymous to a folder.
+> Then use the `ls` command (I already explained it previously) with the `-al` flag to check for ALL directories, files, and everything in that directory. You can always have a directory inside a directory. A directory is synonymous to a folder.
 
 ---
 
@@ -122,7 +113,7 @@ d. Create an empty file named fileB in the misc directory. Populate the file wit
 
 `cat misc/fileB` to check the content in the fileB
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707518613397/b4fa555b-acc9-4b10-9759-89d1096f9af0.png align="left")
+![cat](https://cdn.hashnode.com/res/hashnode/image/upload/v1707518613397/b4fa555b-acc9-4b10-9759-89d1096f9af0.png )
 
 > `touch` command is used to create files.
 > 
@@ -136,7 +127,7 @@ e. Copy contents of fileA into fileC
 
 `cp misc/fileA misc/fileC`
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707519171800/194ac850-d228-4f0a-ae1e-82821da13d9f.png align="left")
+![cp](https://cdn.hashnode.com/res/hashnode/image/upload/v1707519171800/194ac850-d228-4f0a-ae1e-82821da13d9f.png)
 
 > `cp` command as it literally mean is to copy content from a file to another file while retaining contents and the file the initial copy was made from.
 
@@ -146,7 +137,7 @@ f. Move contents of fileB into fileD
 
 `mv misc/fileB misc/fileD`
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707519446983/74e3afe2-1fd8-481b-aa19-1d97b2ff3619.png align="left")
+![mv](https://cdn.hashnode.com/res/hashnode/image/upload/v1707519446983/74e3afe2-1fd8-481b-aa19-1d97b2ff3619.png)
 
 > `mv` can be used to move contents of a file to another, and also directories. You can also use it to rename files and directory.This flexibly allows renaming files and directories as well as conviently moving contents from a former file to a new one .This implies that the old file from which the contents were moved from will cease to exist.
 
@@ -154,7 +145,7 @@ g. Create a tar archive called misc.tar for the contents of misc directory
 
 `tar -cvf misc.tar misc`
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707520172820/52067b2f-09ff-40c5-8156-f411145a9f8f.png align="left")
+![tar](https://cdn.hashnode.com/res/hashnode/image/upload/v1707520172820/52067b2f-09ff-40c5-8156-f411145a9f8f.png)
 
 > the `tar` command offers a flexible and powerful way to archive and manage files and directories in Linux systems.
 > 
@@ -166,7 +157,7 @@ h. Compress the tar archive to create a misc.tar.gz file
 
 `gzip misc.tar`
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707520615900/a604b814-fbdc-441d-a52d-4557a2a97d06.png align="left")
+![gzip](https://cdn.hashnode.com/res/hashnode/image/upload/v1707520615900/a604b814-fbdc-441d-a52d-4557a2a97d06.png)
 
 > The `gzip` command is used for compressing files to save disk space or reduce transfer times when transferring files over a network.
 
@@ -176,7 +167,7 @@ i. Create a user and force the user to change his/her password upon login
 
 `sudo chage -d 0 praise`
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707520825018/bfbda5a8-6307-40c4-be29-8dd58a3faa5d.png align="left")
+![sudo chage](https://cdn.hashnode.com/res/hashnode/image/upload/v1707520825018/bfbda5a8-6307-40c4-be29-8dd58a3faa5d.png)
 
 > Remember I already explained what sudo is above right? So we would not touch it anymore.
 > 
@@ -192,7 +183,7 @@ j. Lock a users password
 
 `sudo passwd -l praise`
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707521121058/c6077e1c-e080-49b6-ac39-fae375b9d145.png align="left")
+![sudo passwd](https://cdn.hashnode.com/res/hashnode/image/upload/v1707521121058/c6077e1c-e080-49b6-ac39-fae375b9d145.png)
 
 > The `passwd` command means password. and combined with the `-l` flag it is used to lock a user account. It prevents users from logging in. Locking user accounts is useful for temporarily preventing access to an account, such as during maintenance or investigation of security issues. It can also be used as a security measure if a user's access needs to be revoked temporarily or permanently.
 
@@ -202,7 +193,7 @@ k. Create a user with no login shell
 
 `sudo useradd -s /sbin/nologin Vicky`
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707521497913/4a2d80d6-e9ec-4cc4-893b-b451f02544a6.png align="left")
+![sudo useradd](https://cdn.hashnode.com/res/hashnode/image/upload/v1707521497913/4a2d80d6-e9ec-4cc4-893b-b451f02544a6.png)
 
 > The `-s /sbin/nologin` command is used to set the login shell for a user account to `/sbin/nologin`. A user account configured with /sbin/nologin as its login shell will prevent interactive logins through Telnet, SSH, or other means. Rather, upon attempting to log in, the user will be met with an error message stating that login is prohibited, usually accompanied with an administrator-provided message. By preventing interactive logins, it helps enhance the security of the system by limiting potential points of unauthorized access.
 > 
@@ -214,7 +205,7 @@ l. Disable password based authentication for ssh
 
 `sudo vi /etc/ssh/sshd_config`
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707521882802/3ab775da-6332-44bb-997e-ae8e7b447ccd.png align="left")
+![sudo vi](https://cdn.hashnode.com/res/hashnode/image/upload/v1707521882802/3ab775da-6332-44bb-997e-ae8e7b447ccd.png )
 
 > The command `vi /etc/ssh/sshd_config` is used to open the SSH daemon configuration file (`sshd_config`) in the `vi` text editor,just like the `nano` text editor we talked about earlier.
 > 
@@ -235,10 +226,10 @@ m. Disable root login for ssh
 
 `vi /etc/ssh/sshd_config`
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1707522035649/e372fc66-8c1f-40a0-844f-c75e4fad1009.png align="left")
+![vi](https://cdn.hashnode.com/res/hashnode/image/upload/v1707522035649/e372fc66-8c1f-40a0-844f-c75e4fad1009.png )
 
 > As a continuation from the disabled authentication, scroll back up on the vi editor to line 29 where you have PermitRootLogin and set it to 'no' and save it. You save by pressing the esc key then the double colon (:) followed by the "wq" to save it then you press ENTER to leave the test editor. It should look like this `:wq` . There you go!
 
-### Conclusion:
+## Conclusion:
 
 In summary, as you navigate the terminal, embrace the learning process with patience and perseverance. Every error is a chance to deepen your understanding, and each solution adds to your expertise. Keep exploring, keep learning, and let your discoveries empower your Linux journey. Your thoughts, experiences, and feedback are valuable—feel free to share them with others in our vibrant community of learners. Together, we can inspire and support each other on this exciting adventure through the command line.
