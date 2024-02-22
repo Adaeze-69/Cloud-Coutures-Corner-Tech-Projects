@@ -1,6 +1,6 @@
 ---
 title: "Install, Configure, and  Host a Custom Website on Apache2  Web Server, with Ubuntu, Using AWS EC2 Instance"
-seoTitle: "Step-by-Step Guide: Installing, Configuring, an Apache2 webserver."
+seoTitle: "Step-by-Step Guide: Installing, and Configuring, an Apache2 webserver."
 seoDescription: "Follow our comprehensive step-by-step guide for seamless installation, configuration, and deployment of your custom website."
 datePublished: Thu Feb 22 2024 21:31:39 GMT+0000 (Coordinated Universal Time)
 cuid: clsxqngcg000309l6hsxw63pi
