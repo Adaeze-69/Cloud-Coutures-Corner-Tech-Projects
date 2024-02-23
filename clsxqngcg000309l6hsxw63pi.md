@@ -12,7 +12,7 @@ tags: ubuntu, ec2, aws, apache, apache2, webserver, aws-ec2
 
 ## Introduction
 
-Ubuntu is the most used web server that allows you to host web pages and applications.
+Ubuntu provides the foundation and infrastructure necessary to run web server software like Apache2, enabling it to serve web content to clients over the internet.
 
 We will be covering Installing, Configuring, and Hosting a Custom Website on Apache2 Web Server, with Ubuntu, Using AWS EC2 Instance.
 
